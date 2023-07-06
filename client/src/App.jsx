@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Form from './components/Form'
 import './App.css'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 
   return (
     <div>
+      <Form issues={issues} setIssues={setIssues} />
       <h1>Issues:</h1>
       {issues.map((issue) => (
         <div key={issue._id}>
